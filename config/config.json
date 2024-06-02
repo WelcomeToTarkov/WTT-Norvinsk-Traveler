@@ -6,22 +6,22 @@
     "//Uninstall Note3": "ONLY  your home stash and hideout will be saved for use after removing Traveler from your mods folder.",
     "uninstall": false,
 
-    "home": "Customs.Warehouse17",
+    "home": "Sandbox.Crow_Therapist",
     "multi_stash": true,
     "multi_hideout": true,
     "locale_language": "en",
     "trader_access_restriction": true,
     "world_event_exfil_requirements": true,
     "post_raid_healing_enabled":true,
-    "disable_out_of_raid_quest_stash": true,
+    "disable_out_of_raid_quest_stash": false,
     "car_exfils":{
         "all_cars_free": false,
         "car_currency": "roubles",
-        "customs": 0,
-        "interchange": 0,
-        "lighthouse": 80000,
-        "streets": 0,
-        "woods": 0
+        "customs": 50000,
+        "interchange": 15000,
+        "lighthouse": 150000,
+        "streets": 15000,
+        "woods": 30000
     },
 
     "//markFIR note": "kiki_markFIR = true means all items on your pmc will be FIR on raid end regardless of death, etc.",
@@ -34,6 +34,7 @@
     "backup_on_raid_start": true,
     "backup_on_raid_end": true,
 
+
     "death_updates_offraid_position": true,
     "checkpoint_trader_config": {
         "trader": "therapist",
@@ -44,15 +45,18 @@
         "unlimited_stock": true
     },
     "checkpoints":[
-        "Customs.Warehouse17",
-        "Customs.MilBaseCP",
-        "Woods.ScavBunker",
-        "Reserve.DepotHermeticDoor",
-        "Interchange.ScavCamp",
-        "Shoreline.AdminBasement",
-        "Streets.RuinedHouse"
+        "Streets.Klimov_Therapist_Crow",
+        "Woods.ZB016_Jaeger",
+        "Customs.Warehouse17--Factory.GateM_Chemist",
+        "Factory.CameraBunkerDoor_Mechanic",
+        "Interchange.Saferoom_GoblinLair",
+        "Interchange.HoleinFence_Ragman",
+        "Reserve.DepotHermeticDoor_Wolf",
+        "Woods.NorthernUN-alt>-Customs.ScavCP_Peacekeeper",
+        "Reserve.Train--Lighthouse.Train_Conductor",
+        "Customs.RUAFRoadblock--Woods.RUAFGate_Prapor",
+        "Streets.Catacombs--Labs.HangarGate_Warden"
     ],
-
     
     "regen": {
         "health_regen":{
@@ -65,7 +69,10 @@
             "right_arm_rate": 1.05,
             "left_leg_rate": 1.1375,
             "right_leg_rate": 1.1375,
-            "access_via": ["Customs.Warehouse17"]
+            "access_via": [
+                "Sandbox.Crow_Therapist",
+                "Sandbox.Hideout"
+            ]
         },
 
         "energy_regen":{
@@ -73,13 +80,21 @@
             "available_everywhere": false,
             "rate": 1,
             "access_via": [
-                "Customs.Warehouse17",
-                "Customs.MilBaseCP",
-                "Shoreline.AdminBasement",
-                "Woods.ScavBunker",
-                "Streets.RuinedHouse",
-                "Interchange.ScavCamp",
-                "Reserve.DepotHermeticDoor"
+                "Shoreline.AdminBasement_Skier",
+                "Streets.Klimov",
+                "Woods.ZB016_Jaeger",
+                "Customs.Warehouse17--Factory.GateM_Chemist",
+                "Factory.CameraBunkerDoor_Mechanic",
+                "Interchange.Saferoom_GoblinLair",
+                "Interchange.HoleinFence_Ragman",
+                "Reserve.DepotHermeticDoor_Wolf",
+                "Woods.NorthernUN-alt>-Customs.ScavCP_Peacekeeper",
+                "Reserve.Train--Lighthouse.Train_Conductor",
+                "Customs.RUAFRoadblock--Woods.RUAFGate_Prapor",
+                "Streets.Catacombs--Labs.HangarGate_Warden",
+                "Sandbox.Crow_Therapist",
+                "Sandbox.Hideout"
+                
             ]
         },
 
@@ -88,13 +103,20 @@
             "available_everywhere": false,
             "rate": 1,
             "access_via": [
-                "Customs.Warehouse17",
-                "Customs.MilBaseCP",
-                "Shoreline.AdminBasement",
-                "Woods.ScavBunker",
-                "Streets.RuinedHouse",
-                "Interchange.ScavCamp",
-                "Reserve.DepotHermeticDoor"
+                "Shoreline.AdminBasement_Skier",
+                "Streets.Klimov",
+                "Woods.ZB016_Jaeger",
+                "Customs.Warehouse17--Factory.GateM_Chemist",
+                "Factory.CameraBunkerDoor_Mechanic",
+                "Interchange.Saferoom_GoblinLair",
+                "Interchange.HoleinFence_Ragman",
+                "Reserve.DepotHermeticDoor_Wolf",
+                "Woods.NorthernUN-alt>-Customs.ScavCP_Peacekeeper",
+                "Reserve.Train--Lighthouse.Train_Conductor",
+                "Customs.RUAFRoadblock--Woods.RUAFGate_Prapor",
+                "Streets.Catacombs--Labs.HangarGate_Warden",
+                "Sandbox.Crow_Therapist",
+                "Sandbox.Hideout"
             ]
         }
     },
@@ -103,10 +125,18 @@
         "Therapist": {
             "trader_id": "54cb57776803fa99248b456e",
             "trader_description_text": "",
-            "trader_location_text": "A warehouse somewhere in Customs.",
+            "trader_location_text": "Tarkov City Hospital",
             "accessible_everywhere": false,
             "is_medic": true,
-            "access_via": ["Customs.Warehouse17"]
+            "access_via": ["Sandbox.Crow_Therapist"]
+        },
+        "Crow": {
+            "trader_id": "Crow",
+            "trader_description_text": "",
+            "trader_location_text": "At the Ground Zero Stronghold",
+            "accessible_everywhere": false,
+            "is_medic": false,
+            "access_via": ["Sandbox.Crow_Therapist"]
         },
         "Prapor": {
             "trader_id": "54cb50c76803fa8b248b4571",
@@ -114,7 +144,7 @@
             "trader_location_text": "An abandoned military checkpoint in Customs.",
             "accessible_everywhere": false,
             "is_medic": false,
-            "access_via": ["Customs.MilBaseCP"]
+            "access_via": ["Customs.RUAFRoadblock--Woods.RUAFGate_Prapor"]
         },
         "Skier": {
             "trader_id": "58330581ace78e27b8b10cee",
@@ -122,15 +152,15 @@
             "trader_location_text": "Somewhere in the basement of the Health Resort.",
             "accessible_everywhere": false,
             "is_medic": false,
-            "access_via": ["Shoreline.AdminBasement"]
+            "access_via": ["Shoreline.AdminBasement_Skier"]
         },
         "Jaeger": {
             "trader_id": "5c0647fdd443bc2504c2d371",
             "trader_description_text": "",
             "trader_location_text": "A bunker in the northern parts of Woods.",
             "accessible_everywhere": false,
-            "is_medic": true,
-            "access_via": ["Woods.ScavBunker"]
+            "is_medic": false,
+            "access_via": ["Woods.ZB016_Jaeger"]
         },
         "Mechanic": {
             "trader_id": "5a7c2eca46aef81a7ca2145d",
@@ -138,7 +168,7 @@
             "trader_location_text": "An old appartment building in Tarkov City.",
             "accessible_everywhere": false,
             "is_medic": false,
-            "access_via": ["Streets.RuinedHouse"]
+            "access_via": ["Factory.CameraBunkerDoor_Mechanic"]  
         },
         "Ragman": {
             "trader_id": "5ac3b934156ae10c4430e83c",
@@ -146,62 +176,109 @@
             "trader_location_text": "A survivor camp outside the Mall.",
             "accessible_everywhere": false,
             "is_medic": false,
-            "access_via": ["Interchange.ScavCamp"]
+            "access_via": ["Interchange.HoleinFence_Ragman"]
         },
         "Peacekeeper": {
             "trader_id": "5935c25fb3acc3127c3d8cd9",
             "trader_description_text": "",
-            "trader_location_text": "Holed up in an old supply bunker in the military base.",
+            "trader_location_text": "UN Checkpoint near the Woods.",
             "accessible_everywhere": false,
             "is_medic": false,
-            "access_via": ["Reserve.DepotHermeticDoor"]
-        },
-        "Fence": {
-            "trader_id": "579dc571d53a0658a154fbec",
-            "trader_description_text": "",
-            "trader_location_text": "Ever present in all locations. Fence sees all.",
-            "accessible_everywhere": true,
-            "is_medic": false,
-            "access_via": [""]
+            "access_via": ["Woods.NorthernUN-alt>-Customs.ScavCP_Peacekeeper"]
         },
         "Flea": {
             "trader_id": "ragfair",
             "unlock_via_offraid_pos": true,
             "//Note": "unlock_level only applies if unlock_via_offraid_pos = true",
-            "unlock_level": 10,
+            "unlock_level": 1,
             "access_via": [
-                "Customs.MilBaseCP",
-                "Shoreline.AdminBasement",
-                "Woods.ScavBunker",
-                "Streets.RuinedHouse",
-                "Interchange.ScavCamp",
-                "Reserve.DepotHermeticDoor"
+                "Customs.RUAFRoadblock--Woods.RUAFGate_Prapor",
+                "Streets.Klimov_Therapist_Crow",
+                "Reserve.DepotHermeticDoor_Wolf",
+                "Streets.Catacombs--Labs.HangarGate_Warden",
+                "Interchange.Saferoom_GoblinLair",
+                "Interchange.HoleinFence_Ragman",
+                "Reserve.Train--Lighthouse.Train_Conductor",
+                "Customs.Warehouse17--Factory.GateM_Chemist",
+                "Factory.CameraBunkerDoor_Mechanic",
+                "Streets.RuinedHouse_Courier",
+                "Woods.ZB016_Jaeger",
+                "Shoreline.AdminBasement_Skier",
+                "Woods.NorthernUN-alt>-Customs.ScavCP_Peacekeeper"
+
             ]
         },
-
         "Goblin King": {
             "trader_id": "GoblinKing",
             "trader_description_text": "",
             "trader_location_text": "In the saferoom underneath the mall.",
             "accessible_everywhere": false,
             "is_medic": false,
-            "access_via": ["Interchange.Saferoom"]
+            "access_via": ["Interchange.Saferoom_GoblinLair"]
         },
-        "Broker": {
-            "trader_id": "broker-trader-id",
+        "Chemist": {
+            "trader_id": "Chemist",
             "trader_description_text": "",
-            "trader_location_text": "In a bunker on Customs with a power locked door.",
+            "trader_location_text": "Customs Warehouse Bunker",
             "accessible_everywhere": false,
             "is_medic": false,
-            "access_via": ["Customs.ZB1013"]
+            "access_via": ["Customs.Warehouse17--Factory.GateM_Chemist"]
         },
-        "Moron DRIP Trader": {
-            "trader_id": "moron",
+        "Wolf": {
+            "trader_id": "Wolf",
             "trader_description_text": "",
-            "trader_location_text": "An old appartment building in Tarkov City.",
+            "trader_location_text": "Old Military Bunker on the Reserve Base.",
             "accessible_everywhere": false,
             "is_medic": false,
-            "access_via": ["Streets.RuinedHouse"]
+            "access_via": ["Reserve.DepotHermeticDoor_Wolf"]
+        },
+        "Warden": {
+            "trader_id": "Warden",
+            "trader_description_text": "",
+            "trader_location_text": "Abandoned passageway to the Warden.",
+            "accessible_everywhere": false,
+            "is_medic": false,
+            "access_via": ["Streets.Catacombs--Labs.HangarGate_Warden"]
+        },
+        "Conductor": {
+            "trader_id": "Conductor",
+            "trader_description_text": "",
+            "trader_location_text": "Old Military Bunker on the Reserve Base.",
+            "accessible_everywhere": false,
+            "is_medic": false,
+            "access_via": ["Reserve.Train--Lighthouse.Train_Conductor"]
+        },
+        "Courier": {
+            "trader_id": "Courier",
+            "trader_description_text": "",
+            "trader_location_text": "Post Office of Tarkov City",
+            "accessible_everywhere": false,
+            "is_medic": false,
+            "access_via": ["Streets.RuinedHouse_Courier"]
+        },
+        "WTTDatabase": {
+            "trader_id": "WTTDatabase",
+            "trader_description_text": "",
+            "trader_location_text": "I need guns. Lots of guns.",
+            "accessible_everywhere": true,
+            "is_medic": false,
+            "access_via": []
+        },
+        "Fence": {
+            "trader_id": "579dc571d53a0658a154fbec",
+            "trader_description_text": "",
+            "trader_location_text": "assssssss",
+            "accessible_everywhere": false,
+            "is_medic": false,
+            "access_via": []
+        },
+        "JunkDealer": {
+            "trader_id": "JunkDealer",
+            "trader_description_text": "",
+            "trader_location_text": "I deal the junk (that's slang for heroin)",
+            "accessible_everywhere": false,
+            "is_medic": false,
+            "access_via": []
         }
     },
 
@@ -212,57 +289,76 @@
             "upgradable": true,
             "size_h": 0,
             "size_v": 0,
-            "access_via": ["Customs.Warehouse17", "Streets.Klimov"]
+            "access_via": ["Sandbox.Hideout"]
         },
         "Prapor_Stash":{
             "upgradable": true,
             "size_h": 0,
             "size_v": 0,
-            "access_via": ["Customs.MilBaseCP"]
+            "access_via": ["Customs.RUAFRoadblock--Woods.RUAFGate_Prapor"]
         },
-        "Jaeger_Stash":{
+        "Jaeger":{
             "upgradable": true,
             "size_h": 0,
             "size_v": 0,
-            "access_via": ["Woods.ScavBunker"]
+            "access_via": ["Woods.ZB016_Jaeger"]
         },
         "Mechanic_Stash":{
             "upgradable": true,
             "size_h": 0,
             "size_v": 0,
-            "access_via": ["Streets.RuinedHouse"]
+            "access_via": ["Factory.CameraBunkerDoor_Mechanic"]
         },
         "Peacekeeper_Stash":{
             "upgradable": true,
             "size_h": 0,
             "size_v": 0,
-            "access_via": ["Reserve.DepotHermeticDoor"]
+            "access_via": ["Woods.NorthernUN-alt>-Customs.ScavCP_Peacekeeper"]
         },
         "Ragman_Stash":{
             "upgradable": true,
             "size_h": 0,
             "size_v": 0,
-            "access_via": ["Interchange.ScavCamp"]
+            "access_via": ["Interchange.HoleinFence_Ragman"]
         },
         "Skier_Stash":{
             "upgradable": true,
             "size_h": 0,
             "size_v": 0,
-            "access_via": ["Shoreline.AdminBasement"]
+            "access_via": ["Shoreline.AdminBasement_Skier"]
         },
-        "Interchange.Saferoom_Stash":{
-            "upgradable": false,
-            "size_h": 10,
-            "size_v": 50,
-            "access_via": ["Interchange.Saferoom"]
+        "Chemist_Stash":{
+            "upgradable": true,
+            "size_h": 0,
+            "size_v": 0,
+            "access_via": ["Customs.Warehouse17--Factory.GateM_Chemist"]
         },
-        "Customs.ZB1013_Stash":{
-            "upgradable": false,
-            "size_h": 10,
-            "size_v": 50,
-            "access_via": ["Customs.ZB1013"]
+        "Wolf_Stash":{
+            "upgradable": true,
+            "size_h": 0,
+            "size_v": 0,
+            "access_via": ["Reserve.DepotHermeticDoor_Wolf"]
+        },
+        "Conductor_Stash":{
+            "upgradable": true,
+            "size_h": 0,
+            "size_v": 0,
+             "access_via": ["Reserve.Train--Lighthouse.Train_Conductor"]
+        },
+        "Courier_Stash":{
+            "upgradable": true,
+            "size_h": 0,
+            "size_v": 0,
+            "access_via": ["Streets.RuinedHouse_Courier"]
+        },
+        "Warden_Stash":{
+            "upgradable": true,
+            "size_h": 0,
+            "size_v": 0,
+            "access_via": ["Streets.Catacombs--Labs.HangarGate_Warden"]
         }
     },
+
 
     "//Hideout Note": "The generator, water collector, air filter, and gym can't be disabled to prevent game crash.",
     "//Hideout Note2": "include each station you want to include, or include all_stations = true followed by any you'd like to subtract = false",
@@ -270,7 +366,7 @@
     "hideouts":{
         "Home_Hideout":{
 
-            "access_via":["Customs.Warehouse17"],
+            "access_via":["Sandbox.Crow_Therapist"],
             
             "stations": {
                 "generator": true,
@@ -304,61 +400,7 @@
 
         "Prapor_Hideout":{
 
-            "access_via":["Customs.MilBaseCP"],
-            
-            "stations": {
-                "all_stations": true
-            }
-        },
-
-        "Skier_Hideout":{
-
-            "access_via":["Shoreline.AdminBasement"],
-            
-            "stations": {
-                "all_stations": true
-            }
-        },
-
-        "Jaeger_Hideout":{
-
-            "access_via":["Woods.ScavBunker"],
-            
-            "stations": {
-                "all_stations": true
-            }
-        },
-
-        "Mechanic_Hideout":{
-
-            "access_via":["Streets.RuinedHouse"],
-            
-            "stations": {
-                "all_stations": true
-            }
-        },
-
-        "Ragman_Hideout":{
-
-            "access_via":["Interchange.ScavCamp"],
-            
-            "stations": {
-                "all_stations": true
-            }
-        },
-
-        "Peacekeeper_Hideout":{
-
-            "access_via":["Reserve.DepotHermeticDoor"],
-            
-            "stations": {
-                "all_stations": true
-            }
-        },
-
-        "Interchange.Saferoom_Hideout":{
-
-            "access_via":["Interchange.Saferoom"],
+            "access_via":["Customs.RUAFRoadblock--Woods.RUAFGate_Prapor"],
             
             "stations": {
                 "all_stations": true,
@@ -366,9 +408,96 @@
             }
         },
 
-        "Customs.ZB1013_Hideout":{
+        "Skier_Hideout":{
 
-            "access_via":["Customs.ZB1013"],
+            "access_via":["Shoreline.AdminBasement_Skier"],
+            
+            "stations": {
+                "all_stations": true,
+                "stash": false
+            }
+        },
+
+        "Jaeger_Hideout":{
+
+            "access_via":["Woods.ZB016_Jaeger"],
+            
+            "stations": {
+                "all_stations": true,
+                "stash": false
+            }
+        },
+
+        "Mechanic_Hideout":{
+
+            "access_via":["Factory.CameraBunkerDoor_Mechanic"],
+            
+            "stations": {
+                "all_stations": true,
+                "stash": false
+            }
+        },
+        "Chemist_Hideout":{
+
+            "access_via":["Customs.Warehouse17--Factory.GateM_Chemist"],
+            
+            "stations": {
+                "all_stations": true,
+                "stash": false
+            }
+        },
+        "Conductor_Hideout":{
+
+            "access_via":["Reserve.Train--Lighthouse.Train_Conductor"],
+            
+            "stations": {
+                "all_stations": true,
+                "stash": false
+            }
+        },
+        "Wolf_Hideout":{
+
+            "access_via":["Reserve.DepotHermeticDoor_Wolf"],
+            
+            "stations": {
+                "all_stations": true,
+                "stash": false
+            }
+        },
+
+        "Ragman_Hideout":{
+
+            "access_via":["Interchange.HoleinFence_Ragman"],
+            
+            "stations": {
+                "all_stations": true,
+                "stash": false
+            }
+        },
+
+        "Peacekeeper_Hideout":{
+
+            "access_via":["Woods.NorthernUN-alt>-Customs.ScavCP_Peacekeeper"],
+            
+            "stations": {
+                "all_stations": true,
+                "stash": false
+            }
+        },
+
+        "Courier_Hideout":{
+
+            "access_via":["Streets.RuinedHouse_Courier"],
+            
+            "stations": {
+                "all_stations": true,
+                "stash": false
+            }
+        },
+
+        "Warden_Hideout":{
+
+            "access_via":["Streets.Catacombs--Labs.HangarGate_Warden"],
             
             "stations": {
                 "all_stations": true,
@@ -393,20 +522,32 @@
                 "bigmap": "Factory Far Corner"
             }
         },
+        "Factory.CameraBunkerDoor_Mechanic":{
 
-        "Woods.FactoryGate--Factory.MedTent":{
+            "access_via":{
+                "factory4_day": ["Camera Bunker Door"],
+                "factory4_night": ["Camera Bunker Door"]
+            },
+
+            "can_infil_to":{
+                "factory4_day": "Camera Bunker Door",
+                "factory4_night": "Camera Bunker Door"
+            }
+        },
+
+        "Customs.Warehouse17--Factory.GateM_Chemist":{
 
 
             "access_via":{
                 "factory4_day": ["Gate m"],
                 "factory4_night": ["Gate m"],
-                "woods": ["Factory Gate"]
+                "bigmap": ["Warehouse 17"]
             },
 
             "can_infil_to":{
+                "bigmap": "Warehouse 17",
                 "factory4_day": "Med tent gates",
-                "factory4_night": "Med tent gates",
-                "woods": "Factory Gate"
+                "factory4_night": "Med tent gates"
             }
         },
 
@@ -438,14 +579,16 @@
             }
         },
 
-        "Customs.RRtoMilitaryBase-1w>-Reserve.TrainStation":{
+        "Customs.RUAFRoadblock--Woods.RUAFGate_Prapor":{
 
             "access_via":{
-                "bigmap": ["Railroad To Military Base"]
+                "bigmap": ["RUAF Roadblock"],
+                "woods": ["RUAF Gate"]
             },
 
             "can_infil_to":{
-                "rezervbase": "Train Station"
+                "bigmap": "RUAF Roadblock",
+                "woods": "RUAF Gate"
             }
         },
 
@@ -463,44 +606,16 @@
             }
         },
 
-        "Customs.Crossroads--Shoreline.RoadToCustoms":{
+        "Customs.Crossroads--Interchange.RoadToCustoms":{
 
             "access_via":{
                 "bigmap": ["Crossroads"],
-                "shoreline": ["Road to Customs"]
+                "interchange": ["SE Exfil"]
             },
 
             "can_infil_to":{
                 "bigmap": "Crossroads",
-                "shoreline": "Road to Customs"
-
-            }
-        },
-
-        "Woods.UNRoadblock--Customs.ScavCP":{
-
-            "access_via":{
-                "woods": ["UN Roadblock"],
-                "bigmap": ["Military Checkpoint"]
-            },
-
-            "can_infil_to":{
-                "woods": "UN Roadblock",
-                "bigmap": "Scav CP"
-
-            }
-        },
-
-        "Customs.Warehouse17":{
-           
-            "access_via":{
-                "bigmap": ["Warehouse 17"],
-                "lighthouse": [" V-Ex_light"]
-
-            },
-
-            "can_infil_to":{
-                "bigmap": "Warehouse 17"
+                "interchange": "Emercom"
 
             }
         },
@@ -515,56 +630,44 @@
                 "bigmap": "ZB-1013"
             }
         },
-
-        "Customs.MilBaseCP":{
-
-            "access_via":{
-                "bigmap": ["Shack"]
-            },
-
-            "can_infil_to":{
-                "bigmap": "Military Base CP"
-            }
-        },
-
-        "Woods.Outskirts--Lighthouse.NorthernCP":{
+        "Woods.Outskirts--Reserve.NorthernCPFence":{
 
             "access_via":{
                 "woods": ["Outskirts"],
-                "lighthouse": ["Nothern_Checkpoint"]
+                "rezervbase": ["Exit4"]
             },
 
             "can_infil_to":{
                 "woods": "Outskirts",
-                "lighthouse": "Northern CP"
+                "rezervbase": "CP Fence"
             }
         },
 
-        "Woods.Car-1w>-Streets.KamchatskyaArch":{
+        "Woods.Car-1w>-Streets.ZmeevskyAlley":{
 
             "access_via":{
                 "woods": ["South V-Ex"]
             },
 
             "can_infil_to":{
-                "tarkovstreets": "Kamchatskya Arch"
+                "tarkovstreets": "Streets Vehicle Extract"
             }
         },
 
-        "Woods.ScavBunker":{
+        "Woods.ZB016_Jaeger":{
 
-            
+            "is_checkpoint": true,
 
             "access_via":{
-                "woods": ["East Gate"]
+                "woods": ["ZB-016"]
             },
 
             "can_infil_to":{
-                "woods": "Scav Bunker"
+                "woods": "Mountain Stash"
             }
         },
 
-        "Woods.NorthernUN-alt>-Customs.ScavCP":{
+        "Woods.NorthernUN-alt>-Customs.ScavCP_Peacekeeper":{
 
             "access_via":{
                 "woods": ["un-sec"]
@@ -589,28 +692,14 @@
             }
         },
 
-        "Streets.CrashSite--Reserve.CPFence":{
-
-            "access_via":{
-                "rezervbase": ["Exit4"],
-                "tarkovstreets": ["E4"]
-            },
-
-            "can_infil_to":{
-                "rezervbase": "CP Fence",
-                "tarkovstreets": "Crash Site"
-            }
-        },
-
         "Reserve.CliffDescent-1w>-Shoreline.NorthernCliffs":{
 
             "access_via":{
                 "rezervbase": ["Alpinist"]
             },
-
             "can_infil_to":{
-                "shoreline": "Shoreline Northern Cliffs"
-            }
+                "rezervbase":"Cliff"
+        }
         },
 
         "Reserve.D2-1w>-Woods.SniperRockBunker":{
@@ -624,20 +713,20 @@
             }
         },
 
-        "Reserve.BunkerHermetic-1w>-Shoreline.CCPTemporary":{
-
+        "Reserve.BunkerHermetic":{
+            "is_checkpoint": true,
             "access_via":{
                 "rezervbase": ["EXFIL_Bunker"]
             },
 
             "can_infil_to":{
-                "shoreline": "CCP Temporary"
+                "rezervbase": "Bunker Hermetic"
             }
         },
 
-        "Reserve.DepotHermeticDoor":{
+        "Reserve.DepotHermeticDoor_Wolf":{
 
-            
+            "is_checkpoint": true,
 
             "access_via":{
                 "rezervbase": ["Exit3"]
@@ -647,46 +736,59 @@
                 "rezervbase": "Depot Hermetic"
             }
         },
-
-        "Interchange.Car-alt>-Streets.ExpoCP":{
+        "Reserve.Train--Lighthouse.Train_Conductor":{
+            "is_checkpoint": true,
 
             "access_via":{
-                "interchange": ["PP Exfil"]
+                "rezervbase": ["EXFIL_Train"],
+                "lighthouse": ["EXFIL_Train"]
             },
 
             "can_infil_to":{
-                "interchange": "Interchange Vehicle Extract",
-                "tarkovstreets": "Expo Checkpoint"
+                "rezervbase": "Train Station",
+                "lighthouse": "Lighthouse Armored Train"
+            }
+
+        },
+
+        "Interchange.Car-alt>-Streets.Primorsky":{
+
+            "access_via":{
+                "interchange": ["SE Exfil"]
+            },
+
+            "can_infil_to":{
+                "tarkovstreets": "Streets Vehicle Extract"
             }
         },
 
-        "Interchange.Emercom--Streets.ExpoCP":{
+        "Interchange.Emercom--Streets.CrashSite":{
 
             "access_via":{
                 "interchange": ["SE Exfil"],
-                "tarkovstreets": ["E7"]
+                "tarkovstreets": ["E4"]
             },
 
             "can_infil_to":{
                 "interchange": "Emercom",
-                "tarkovstreets": "Expo Checkpoint"
+                "tarkovstreets": "Crash Site"
             }
         },
 
-        "Interchange.ScavCamp":{
+        "Interchange.HoleinFence_Ragman":{
 
-            
+            "is_checkpoint": true,
 
             "access_via":{
-                "interchange": ["Interchange Cooperation"]
+                "interchange": ["Hole Exfill"]
             },
 
             "can_infil_to":{
-                "interchange": "Scav Camp"
+                "interchange": "Emercom"
             }
         },
 
-        "Interchange.Saferoom":{
+        "Interchange.Saferoom_GoblinLair":{
 
             "access_via":{
                 "interchange": ["Saferoom Exfil"]
@@ -708,28 +810,28 @@
             }
         },
 
-        "Lighthouse.Grotto--Shoreline.PierBoat":{
+        "Lighthouse.Grotto--Shoreline.PierBoat--Customs.SmugglerBoat":{
 
             "access_via":{
                 "lighthouse": ["Scav_Hideout_at_the_grotto"],
-                "shoreline": ["Pier Boat"]
+                "shoreline": ["Pier Boat"],
+                "bigmap": ["Smuggler's Boat"]
             },
 
             "can_infil_to":{
                 "lighthouse": "Grotto",
-                "shoreline": "Pier Boat"
+                "shoreline": "Pier Boat",
+                "bigmap": "Smuggler's Boat"
             }
         },
 
-        "Shoreline.Tunnel--Lighthouse.SouthernRoad":{
+        "Shoreline.Tunnel--FloodedGrounds.SouthernRoad":{
 
             "access_via":{
-                "lighthouse": ["tunnel_shared"],
                 "shoreline": ["Tunnel"]
             },
 
             "can_infil_to":{
-                "lighthouse": "Lighthouse Tunnel",
                 "shoreline": "Shoreline Tunnel"
             }
         },
@@ -747,9 +849,9 @@
             }
         },
 
-        "Shoreline.AdminBasement":{
+        "Shoreline.AdminBasement_Skier":{
 
-            
+            "is_checkpoint": true,
 
             "access_via":{
                 "shoreline": ["Adm Basement"]
@@ -760,39 +862,37 @@
             }
         },
 
-        "Lighthouse.SouthernRoad-alt>-Shoreline.Tunnel":{
+        "Lighthouse.SouthernRoad-alt>-FloodedGround.WestTunnel":{
 
             "access_via":{
                 "lighthouse": ["Coastal_South_Road"]
             },
 
             "can_infil_to":{
-                "lighthouse": "Southern Road",
-                "shoreline": "Shoreline Tunnel"
+                "lighthouse": "Southern Road"
             }
         },
 
-        "Lighthouse.MountainPass-alt>-Shoreline.PathToLighthouse":{
+        "Lighthouse.MountainPass-alt>-FloodedGrounds.PathToLighthouse":{
 
             "access_via":{
                 "lighthouse": ["Alpinist_light"]
             },
 
             "can_infil_to":{
-                "lighthouse": "Mountain Pass",
-                "shoreline": "Path to Lighthouse"
+                "lighthouse": "Mountain Pass"
             }
         },
 
-        "Streets.SewerRiver--Lab.SewageConduit":{
+        "Streets.Underpass--Lab.SewageConduit":{
 
             "access_via":{
-                "tarkovstreets": ["E2"],
+                "tarkovstreets": ["e1"],
                 "laboratory": ["lab_Under_Storage_Collector"]
             },
 
             "can_infil_to":{
-                "tarkovstreets": "Sewer River",
+                "tarkovstreets": "Underpass",
                 "laboratory": "Lab Sewage Conduit"
             }
         },
@@ -810,35 +910,9 @@
             }
         },
 
-        "Streets.Catacombs--Lab.ParkingGate":{
+        "Streets.RuinedHouse_Courier":{
 
-            "access_via":{
-                "tarkovstreets": ["scav_e2"],
-                "laboratory": ["lab_Parking_Gate"]
-            },
-
-            "can_infil_to":{
-                "tarkovstreets": "Catacombs",
-                "laboratory": "Parking Gate"
-            }
-        },
-
-        "Streets.VentilationShaft--Lab.VentilationShaft":{
-
-            "access_via":{
-                "tarkovstreets": ["scav_e3"],
-                "laboratory": ["lab_Vent"]
-            },
-
-            "can_infil_to":{
-                "tarkovstreets": "Streets Vents",
-                "laboratory": "Lab Vents"
-            }
-        },
-
-        "Streets.RuinedHouse":{
-
-            
+            "is_checkpoint": true,
 
             "access_via":{
                 "tarkovstreets": ["E3"]
@@ -846,6 +920,37 @@
 
             "can_infil_to":{
                 "tarkovstreets": "Streets Ruined House"
+            }
+        },
+        "Sandbox.Hideout":{
+
+            "access_via":{
+                "sandbox": ["Nakatani_stairs_free_exit"]
+            },
+
+            "can_infil_to":{
+                "sandbox": "hideout_gz"
+            }
+        },
+        "Sandbox.Crow_Therapist":{
+
+            "access_via":{
+                "sandbox": ["To Kilmov Street"]
+            },
+
+            "can_infil_to":{
+                "sandbox": "Crow Hideout"
+            }
+        },
+        "Sandbox.Klimov":{
+
+            "access_via":{
+                "sandbox": ["Sniper_exit"]
+            },
+
+            "can_infil_to":{
+                "sandbox": "From Streets",
+                "tarkovstreets": "Klimov Street"
             }
         },
 
@@ -856,14 +961,18 @@
             },
 
             "can_infil_to":{
-                "tarkovstreets": "Klimov Street"
+                "tarkovstreets": "Klimov Street",
+                "sandbox": "From Streets"
             }
         },
 
-        "Lab.HangarGate-alt>-Streets.Catacombs":{
+        "Streets.Catacombs--Labs.HangarGate_Warden":{
+
+            "is_checkpoint": true,
 
             "access_via":{
-                "laboratory": ["lab_Hangar_Gate"]
+                "laboratory": ["lab_Hangar_Gate"],
+                "tarkovstreets": ["scav_e2"]
             },
 
             "can_infil_to":{

@@ -1,10 +1,10 @@
 {
-    "name": "Traveler",
-    "version": "1.1.1",
+    "name": "WTT-Norvinsk Traveler",
+    "version": "0.0.5",
     "main": "src/mod.js",
     "license": "CC BY-NC-ND 4.0",
-    "author": "Jehree",
-    "akiVersion": "3.7.1",
+    "author": "RockaHorse",
+    "akiVersion": "~3.8",
     "scripts": {
         "setup": "npm i",
         "build": "node ./packageBuild.ts"

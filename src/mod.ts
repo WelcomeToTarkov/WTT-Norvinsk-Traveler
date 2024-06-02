@@ -60,7 +60,7 @@ class Mod implements IPreAkiLoadMod, IPostAkiLoadMod, IPostDBLoadMod
         const dbLocations = dbTables.locations
         const dbLocales = dbTables.locales.global
         const dbTraders = dbTables.traders
-        const dbQuests = dbTables.templates.quests
+        //const dbQuests = dbTables.templates.quests
         const dbItems = dbTables.templates.items
         const Stash_Controller = new StashController()
         const jsonUtil = container.resolve<JsonUtil>("JsonUtil")
@@ -83,7 +83,7 @@ class Mod implements IPreAkiLoadMod, IPostAkiLoadMod, IPostDBLoadMod
        
         Init.removeStashSizeBonusesFromDB(dbTables.hideout.areas)
         Init.noRunThrough(dbTables.globals)
-        Init.questFixes(dbQuests)
+        //Init.questFixes(dbQuests)
         Init.changeExfilLocales(dbLocales)
         Init.changeTraderLocales(dbLocales)
         Init.setMedics(dbTraders)

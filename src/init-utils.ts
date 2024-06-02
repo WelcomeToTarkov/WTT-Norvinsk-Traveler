@@ -77,13 +77,13 @@ export class InitUtils{
         dbGlobals.config.exp.match_end.survived_seconds_requirement = 0;
     }
 
-    questFixes(dbQuests: Record<string, IQuest>):void{
+    /*questFixes(dbQuests: Record<string, IQuest>):void{
         
         //change Dangerous Road quest to require an underpass extraction instead of streets car
         //tweak to the locale in the extraction_tooltips.json file
         const dangerousRoadQuest = dbQuests["63ab180c87413d64ae0ac20a"]
         dangerousRoadQuest.conditions.AvailableForFinish[0]._props.counter.conditions[2]._props["exitName"] = "E7"
-    }
+    }*/
 
     removeStashSizeBonusesFromDB(dbHideoutAreas: IHideoutArea[]):void{
         const stashStationTypeNumber = 3

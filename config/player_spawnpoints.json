@@ -340,26 +340,6 @@
     "Zmeevsky Alley": {
       "Position": [176.868683, 0.7778812, 172.814636],
       "Rotation": 304.3322
-    },
-    "Expo Checkpoint": {
-      "Position": [215, -1.93, -88.75],
-      "Rotation": 304.3322
-    },
-    "Cardinal Appartments Parking": {
-      "Position": [103.6, -1.9, -155.3],
-      "Rotation": 304.3322
-    },
-    "Cardinal Appartments": {
-      "Position": [82.8, 3.97, -175.4],
-      "Rotation": 304.3322
-    },
-    "Crash Site": {
-      "Position": [269.3, 3.4, 427.25],
-      "Rotation": 87.62667
-    },
-    "Kamchatskya Arch": {
-      "Position": [254.4, -5.9, 50.5],
-      "Rotation": 304.3322
     }
   },
   "laboratory": {
@@ -390,6 +370,20 @@
     "Parking Gate": {
       "Position": [-231.813736, 0.0220247321, -426.099579],
       "Rotation": 14.0038671
+    }
+  },
+  "sandbox": {
+    "hideout_gz": {
+      "Position": [180.9, 16.27, 114.89],
+      "Rotation": 95.4804
+    },
+    "From Streets": {
+      "Position": [233.1694, 16.01762, 56.08633],
+      "Rotation": 251.7702
+    },
+    "Crow Hideout": {
+      "Position": [31.74341, 22.59711, -85.79424],
+      "Rotation": 43.04764
     }
   }
 }
